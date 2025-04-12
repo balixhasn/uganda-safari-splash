@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,51 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-safari {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-safari text-white hover:bg-safari-light h-11 px-8 py-2 shadow-md;
+  }
+  
+  .safari-section {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  .safari-container {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .safari-card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+  
+  .safari-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-serif;
+  }
+  
+  .safari-subheading {
+    @apply text-2xl md:text-3xl font-semibold font-serif;
+  }
+}
+
+.quote-mark {
+  position: relative;
+}
+
+.quote-mark::before {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  position: absolute;
+  left: -0.5rem;
+  top: -2rem;
+  opacity: 0.2;
+  color: #3A5C34;
 }
